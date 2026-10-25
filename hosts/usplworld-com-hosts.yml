@@ -1,0 +1,64 @@
+generated: '2026-10-25'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 2
+  other_domain: 2
+  platform: 0
+  roles:
+  - api
+  - identity
+  - website
+hosts:
+- host: api.usplworld.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: usplworld.com
+  role: api
+  relation: own
+- host: api.wrogn.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: wrogn.com
+  role: api
+  relation: other-domain
+- host: wrogn.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Newsroom
+  - Login
+  serves: []
+  platform: shopify.com
+  registrable_domain: wrogn.com
+  role: identity
+  relation: other-domain
+- host: www.usplworld.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  - hosting
+  platform: shopify.com
+  vendor: cloudflare
+  registrable_domain: usplworld.com
+  role: website
+  relation: own

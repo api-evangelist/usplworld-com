@@ -1,0 +1,8 @@
+generated: '2026-10-25'
+method: derived
+source: https://wrogn.com/.well-known/ucp
+
+deployment:
+  mode: none
+  auth: none
+  verified: derived
